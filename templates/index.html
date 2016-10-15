@@ -1,0 +1,23 @@
+<html>
+ <head>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+ </head>
+<body>
+<div>
+
+ <h2>Super Awesome CoffeePi</h2>
+ 
+ {% if data.is_on %}
+   <p> Coffee machine status: {{data.status}}</p>
+ {% else %}
+   <p> Coffee machine status: {{data.status}}</p>
+ {% endif %}
+ 
+ <form action="/coffee/{{data.todo}}" method="get">
+     <button type="submit">Turn {{data.todo}}!</button>
+ </form>
+ 
+</div>
+</body>
+</html>
